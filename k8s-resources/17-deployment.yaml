@@ -1,0 +1,25 @@
+appVersion: v1
+kind: Deployment
+metadata:
+  name: deployment-demo
+  labels:
+    name: roboshop
+    purpose: deployment-demo
+    course: devops
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: roboshop
+      purpose: deployment-demo
+      course: devops
+  template:
+    metadata:
+      labels:
+        name: roboshop
+        purpose: deployment-demo
+        course: devops        
+    spec:
+      containers:
+      - name: nginx
+        image: nginx

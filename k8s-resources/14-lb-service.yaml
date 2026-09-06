@@ -1,0 +1,14 @@
+appVersion: v1
+kind: Service
+metadata:
+  name: nginx-lb 
+spec:
+  type: LoadBalancer
+  selector:
+    name: roboshop
+    purpose: lb-demo
+    course: devops
+  ports:
+    port: 80
+    targetPort: 80
+    protocol: "TCP"

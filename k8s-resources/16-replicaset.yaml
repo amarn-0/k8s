@@ -1,0 +1,26 @@
+appVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-demo
+  labels:
+    name: roboshop
+    course: devops
+    purpose: replicaset-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: roboshop
+      course: devops
+      purpose: replicaset-demo
+  template:
+    metadata:
+      labels:
+        name: roboshop
+        course: devops
+        purpose: replicaset-demo
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+

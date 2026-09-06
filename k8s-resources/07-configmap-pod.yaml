@@ -1,0 +1,11 @@
+appVersion: v1
+kind: Pod
+metadata:
+  name: configmap non-confediential demo
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+      name: non-confidential

@@ -1,0 +1,12 @@
+appVersion: v1
+kind: Pod
+metadata:
+  name: nginx-lb-demo
+  labels:
+    name: roboshop
+    purpose: lb-demo
+    course: devops
+spec:
+  containers:
+  - name: nginx
+    image: nginx
